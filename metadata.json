@@ -1,0 +1,6 @@
+{
+  "name": "Nikah - Islamic Matrimony Platform | نكاح - موقع زواج إسلامي",
+  "description": "منصة إسلامية آمنة تجمع بين القلوب الطيبة لتبدأ رحلة الحياة الزوجية على أسس من الإيمان والاحترام والضوابط الشرعية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

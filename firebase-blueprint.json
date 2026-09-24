@@ -1,0 +1,115 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "uid": { "type": "string", "description": "User Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "User full name" },
+        "photoURL": { "type": "string", "description": "Avatar URL" },
+        "role": { "type": "string", "description": "Role: suitor, wali, candidate, admin, guest" },
+        "phone": { "type": "string", "description": "Phone number" },
+        "profileId": { "type": "string", "description": "Associated profile ID if any" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp" }
+      }
+    },
+    "Profile": {
+      "collection": "profiles",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "fullName": { "type": "string" },
+        "gender": { "type": "string" },
+        "age": { "type": "number" },
+        "city": { "type": "string" },
+        "nationality": { "type": "string" },
+        "profession": { "type": "string" },
+        "education": { "type": "string" },
+        "height": { "type": "number" },
+        "maritalStatus": { "type": "string" },
+        "hasChildren": { "type": "boolean" },
+        "prayerHabit": { "type": "string" },
+        "quranMemorization": { "type": "string" },
+        "religiousAttire": { "type": "string" },
+        "bio": { "type": "string" },
+        "partnerSpecifications": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "isPhotoBlurred": { "type": "boolean" },
+        "wali": { "type": "map" },
+        "isVerified": { "type": "boolean" },
+        "moderationStatus": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Proposal": {
+      "collection": "proposals",
+      "fields": {
+        "id": { "type": "string" },
+        "suitorId": { "type": "string" },
+        "suitorName": { "type": "string" },
+        "targetProfileId": { "type": "string" },
+        "targetProfileName": { "type": "string" },
+        "waliName": { "type": "string" },
+        "waliPhone": { "type": "string" },
+        "status": { "type": "string" },
+        "stage": { "type": "string" },
+        "meeting": { "type": "map" },
+        "nikahContract": { "type": "map" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "WaliVerification": {
+      "collection": "walis",
+      "fields": {
+        "id": { "type": "string" },
+        "waliName": { "type": "string" },
+        "waliPhone": { "type": "string" },
+        "relation": { "type": "string" },
+        "candidateName": { "type": "string" },
+        "candidateNationalId": { "type": "string" },
+        "documentProof": { "type": "string" },
+        "status": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "verifiedAt": { "type": "string" }
+      }
+    },
+    "SitePage": {
+      "collection": "site_pages",
+      "fields": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "lastUpdated": { "type": "string" },
+        "author": { "type": "string" },
+        "contentAr": { "type": "string" },
+        "contentEn": { "type": "string" }
+      }
+    },
+    "SiteSettings": {
+      "collection": "site_settings",
+      "fields": {
+        "id": { "type": "string" },
+        "footerCopyright": { "type": "string" },
+        "customHeaderScripts": { "type": "string" },
+        "profileLayout": { "type": "map" },
+        "dashboardWidgets": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "UserConfig": {
+      "collection": "users/{userId}/config",
+      "fields": {
+        "privacy": { "type": "map", "description": "Profile visibility, blurPhotosByDefault, allowMessages" },
+        "security": { "type": "map", "description": "twoFactorEnabled, twoFactorMethod, authenticatorAppLinked, backupCodes, activeSessions, loginHistory" },
+        "waliConfig": { "type": "map", "description": "Wali contact info, verification status, and oversight settings" },
+        "notifications": { "type": "map", "description": "SMS, email, WhatsApp, and quiet hours" },
+        "appearance": { "type": "map", "description": "Font size, high contrast, reduced motion" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  }
+}
